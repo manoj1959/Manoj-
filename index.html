@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sirimalla Manoj Kumar | Pharmaceutical Manufacturing Expert</title>
+<meta name="description" content="Sirimalla Manoj Kumar - Pharmaceutical professional with 8+ years in OSD manufacturing, GMP/cGMP compliance, MES documentation and audit excellence at Dr. Reddy's Laboratories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#00d4ff;--secondary:#7b2fff;--accent:#00ff9d;--gold:#ffd700;
+  --dark:#030811;--darker:#010408;--panel:rgba(0,212,255,.04);--glass:rgba(255,255,255,.03);
+  --border:rgba(0,212,255,.15);--text:#c8e6f0;--muted:#4a7a8a;
+  --steel:linear-gradient(135deg,#1a2a3a 0%,#0d1821 50%,#1a2a3a 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Exo 2',sans-serif;background:var(--darker);color:var(--text);cursor:none;overflow-x:hidden;}
+#cursor{position:fixed;width:12px;height:12px;background:var(--primary);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s;mix-blend-mode:screen;box-shadow:0 0 20px var(--primary),0 0 40px var(--primary);}
+#cursor-ring{position:fixed;width:40px;height:40px;border:1px solid rgba(0,212,255,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease,width .3s,height .3s;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#010408;}::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(1,4,8,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s;}
+nav.scrolled{background:rgba(1,4,8,.95);box-shadow:0 0 40px rgba(0,212,255,.1);}
+.nav-logo{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--primary);letter-spacing:.15em;text-decoration:none;text-shadow:0 0 20px var(--primary);}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);font-size:.75rem;letter-spacing:.15em;text-decoration:none;font-family:'Orbitron',monospace;text-transform:uppercase;transition:color .3s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--primary);transition:width .3s;}
+.nav-links a:hover{color:var(--primary);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:.5rem 1.5rem;font-family:'Orbitron',monospace;font-size:.7rem;letter-spacing:.2em;cursor:none;transition:all .3s;text-decoration:none;text-transform:uppercase;}
+.nav-cta:hover{background:var(--primary);color:var(--dark);box-shadow:0 0 30px var(--primary);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;background:none;border:none;padding:5px;}
+.hamburger span{width:25px;height:2px;background:var(--primary);transition:all .3s;}
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6rem 0;}
+#molecule-canvas{position:absolute;inset:0;z-index:0;}
+.hero-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridPulse 4s ease-in-out infinite;}
+@keyframes gridPulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+.hero-glow-orb{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+.orb1{width:600px;height:600px;background:rgba(0,212,255,.08);top:-200px;right:-200px;}
+.orb2{width:400px;height:400px;background:rgba(123,47,255,.08);bottom:-100px;left:-100px;}
+.orb3{width:300px;height:300px;background:rgba(0,255,157,.05);top:50%;left:50%;transform:translate(-50%,-50%);}
+.hero-desc{font-size:clamp(.9rem,2vw,1.05rem);color:var(--text);opacity:.7;max-width:600px;margin:0 0 3rem;line-height:1.8;animation:fadeInUp 1s .6s ease both;}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(0,212,255,.3);padding:.4rem 1.2rem;font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.3em;color:var(--primary);margin-bottom:2rem;background:rgba(0,212,255,.05);animation:fadeInDown .8s ease both;}
+.badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.hero-name{font-family:'Orbitron',monospace;font-size:clamp(2.5rem,7vw,6rem);font-weight:900;line-height:1;letter-spacing:.05em;margin-bottom:1rem;animation:fadeInUp 1s .2s ease both;}
+.hero-name .line1{display:block;background:linear-gradient(135deg,#fff 0%,var(--primary) 50%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(0,212,255,.5));}
+.hero-name .line2{display:block;background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-typewriter{font-family:'Share Tech Mono',monospace;font-size:clamp(.85rem,2vw,1.1rem);color:var(--primary);letter-spacing:.2em;height:1.5em;margin-bottom:2rem;animation:fadeIn 1s .5s both;}
+.typewriter-cursor{display:inline-block;width:2px;height:1em;background:var(--primary);margin-left:2px;vertical-align:middle;animation:blink .8s infinite;}
+.hero-btns{display:flex;gap:1rem;justify-content:flex-start;flex-wrap:wrap;animation:fadeInUp 1s .8s ease both;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--secondary));border:none;color:#fff;padding:.9rem 2.5rem;font-family:'Orbitron',monospace;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;cursor:none;text-decoration:none;transition:all .3s;position:relative;overflow:hidden;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);}
+.btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--primary));opacity:0;transition:opacity .3s;}
+.btn-primary:hover::before{opacity:1;}
+.btn-primary:hover{box-shadow:0 0 40px rgba(0,212,255,.5);transform:translateY(-2px);}
+.btn-primary span{position:relative;z-index:1;}
+.btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary);padding:.9rem 2.5rem;font-family:'Orbitron',monospace;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;cursor:none;text-decoration:none;transition:all .3s;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);}
+.btn-outline:hover{background:rgba(0,212,255,.1);box-shadow:0 0 30px rgba(0,212,255,.3);transform:translateY(-2px);}
+/* HERO LAYOUT */
+.hero-inner{position:relative;z-index:10;width:100%;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:3rem;}
+.hero-content{flex:1;text-align:left;max-width:640px;}
+/* PHOTO 3D RING */
+.photo-3d-wrap{flex-shrink:0;position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center;}
+@media(max-width:1000px){.photo-3d-wrap{display:none;}}
+.photo-sphere{position:relative;width:230px;height:230px;}
+/* Rotating outer rings */
+.ring-orbit{position:absolute;inset:0;border-radius:50%;animation:rotateSlow 10s linear infinite;}
+.ring-orbit:nth-child(1){border:1.5px dashed rgba(0,212,255,0.5);animation-duration:8s;}
+.ring-orbit:nth-child(2){inset:-20px;border:1px solid rgba(123,47,255,0.4);animation-duration:14s;animation-direction:reverse;}
+.ring-orbit:nth-child(3){inset:-40px;border:1px dashed rgba(0,255,157,0.25);animation-duration:20s;}
+/* Atom dots on rings */
+.ring-orbit::before,.ring-orbit::after{content:'';position:absolute;border-radius:50%;}
+.ring-orbit:nth-child(1)::before{width:10px;height:10px;background:var(--primary);box-shadow:0 0 12px var(--primary);top:0;left:50%;transform:translateX(-50%);}
+.ring-orbit:nth-child(1)::after{width:7px;height:7px;background:var(--accent);box-shadow:0 0 10px var(--accent);bottom:0;left:50%;transform:translateX(-50%);}
+.ring-orbit:nth-child(2)::before{width:8px;height:8px;background:var(--secondary);box-shadow:0 0 12px var(--secondary);top:50%;right:0;transform:translateY(-50%);}
+.ring-orbit:nth-child(2)::after{width:6px;height:6px;background:var(--primary);box-shadow:0 0 8px var(--primary);top:50%;left:0;transform:translateY(-50%);}
+.ring-orbit:nth-child(3)::before{width:6px;height:6px;background:var(--gold);box-shadow:0 0 10px var(--gold);top:10%;right:10%;}
+/* 3D Glow halo behind photo */
+.photo-halo{position:absolute;inset:-15px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,212,255,0.18) 0%,rgba(123,47,255,0.1) 50%,transparent 70%);animation:haloPulse 3s ease-in-out infinite;}
+@keyframes haloPulse{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.08);opacity:1;}}
+/* Actual photo circle */
+.photo-circle{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:2.5px solid rgba(0,212,255,0.5);box-shadow:0 0 30px rgba(0,212,255,0.3),0 0 60px rgba(0,212,255,0.1),inset 0 0 20px rgba(0,212,255,0.1);}
+.photo-circle img{width:100%;height:100%;object-fit:cover;border-radius:50%;filter:saturate(1.1) contrast(1.05);}
+.photo-initials{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0d1821,#1a3a5c);font-family:'Orbitron',monospace;font-size:3.5rem;font-weight:900;color:var(--primary);text-shadow:0 0 30px var(--primary),0 0 60px rgba(0,212,255,0.5);}
+/* Floating scan line effect */
+.photo-scanline{position:absolute;inset:0;border-radius:50%;overflow:hidden;pointer-events:none;z-index:2;}
+.photo-scanline::after{content:'';position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,212,255,0.6),transparent);animation:scanLine 3s linear infinite;top:-10%;}
+@keyframes scanLine{0%{top:-10%;}100%{top:110%;}}
+/* Corner data chips */
+.photo-data-chip{position:absolute;font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.1em;color:var(--primary);background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);padding:.2rem .5rem;white-space:nowrap;}
+.chip-tl{top:-30px;left:-10px;}
+.chip-br{bottom:-30px;right:-10px;}
+@keyframes rotateSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* SCROLL COLOR THEME TRANSITIONS */
+body{transition:--scroll-hue .5s;}
+.section-color-1{--sec-bg:#030811;}
+.section-color-2{--sec-bg:#040d0a;}
+.section-color-3{--sec-bg:#07030f;}
+.section-color-4{--sec-bg:#030811;}
+/* Section background accents that shift on scroll */
+#about{background:linear-gradient(180deg,#030d12 0%,#040811 100%);}
+#experience{background:linear-gradient(180deg,#05030f 0%,#030811 100%);}
+#skills{background:linear-gradient(180deg,#030d12 0%,#050311 100%);}
+#accomplishments{background:linear-gradient(180deg,#030811 0%,#040d0a 100%);}
+#equipment{background:linear-gradient(180deg,#040d0a 0%,#030d12 100%);}
+#tools{background:linear-gradient(180deg,#050312 0%,#030811 100%);}
+#education{background:linear-gradient(180deg,#030811 0%,#05030f 100%);}
+#contact{background:linear-gradient(180deg,#03080f 0%,#030811 100%);}
+/* Scroll progress glow on body */
+body::after{content:'';position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent));width:var(--scroll-pct,0%);z-index:9999;transition:width .1s;}
+/* Section headings color cycle */
+#experience .section-title{background:linear-gradient(135deg,#fff,#c084fc)!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#skills .section-title{background:linear-gradient(135deg,#fff,var(--accent))!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#accomplishments .section-title{background:linear-gradient(135deg,#fff,var(--gold))!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#equipment .section-title{background:linear-gradient(135deg,#fff,var(--accent))!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#tools .section-title{background:linear-gradient(135deg,#fff,var(--primary))!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#education .section-title{background:linear-gradient(135deg,#fff,#f472b6)!important;-webkit-background-clip:text!important;background-clip:text!important;}
+#contact .section-title{background:linear-gradient(135deg,#fff,var(--accent))!important;-webkit-background-clip:text!important;background-clip:text!important;}
+.floating-pill{position:absolute;pointer-events:none;z-index:2;font-size:2rem;opacity:.15;animation:floatPill linear infinite;}
+@keyframes floatPill{0%{transform:translateY(100vh) rotate(0deg);opacity:0;}10%{opacity:.15;}90%{opacity:.15;}100%{transform:translateY(-10vh) rotate(720deg);opacity:0;}}
+.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:fadeIn 1.5s 1s both;}
+.scroll-indicator span{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;}
+.scroll-mouse{width:24px;height:36px;border:1px solid rgba(0,212,255,.3);border-radius:12px;position:relative;}
+.scroll-mouse::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:8px;background:var(--primary);border-radius:2px;animation:scrollDown 1.5s infinite;}
+@keyframes scrollDown{0%{transform:translate(-50%,0);opacity:1;}100%{transform:translate(-50%,12px);opacity:0;}}
+section{padding:6rem 0;position:relative;}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.section-header{text-align:center;margin-bottom:4rem;}
+.section-tag{font-family:'Share Tech Mono',monospace;font-size:.65rem;letter-spacing:.4em;color:var(--primary);text-transform:uppercase;margin-bottom:1rem;display:block;opacity:.8;}
+.section-title{font-family:'Orbitron',monospace;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;background:linear-gradient(135deg,#fff,var(--primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;}
+.section-line{width:60px;height:2px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--primary),transparent);}
+#stats{background:var(--darker);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);}
+.stat-card{background:var(--darker);padding:2.5rem 2rem;text-align:center;position:relative;overflow:hidden;transition:background .3s;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--primary),transparent);transform:scaleX(0);transition:transform .5s;}
+.stat-card:hover::before{transform:scaleX(1);}
+.stat-card:hover{background:rgba(0,212,255,.03);}
+.stat-num{font-family:'Orbitron',monospace;font-size:2.5rem;font-weight:900;color:var(--primary);display:block;text-shadow:0 0 30px rgba(0,212,255,.5);}
+.stat-label{font-size:.75rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-family:'Share Tech Mono',monospace;margin-top:.5rem;display:block;}
+#about{background:var(--dark);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem;}}
+.about-visual-box{aspect-ratio:1;max-width:350px;margin:0 auto;position:relative;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;background:linear-gradient(135deg,#0d1821,#0a2a3a,#0d1821);min-height:300px;overflow:hidden;}
+.about-visual-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,212,255,.08),transparent);animation:pulseBg 3s ease-in-out infinite;}
+@keyframes pulseBg{0%,100%{opacity:.5;}50%{opacity:1;}}
+.about-visual-icon{font-size:5rem;filter:drop-shadow(0 0 20px rgba(0,212,255,.5));position:relative;z-index:1;}
+.about-visual-label{font-family:'Orbitron',monospace;font-size:.7rem;letter-spacing:.3em;color:var(--primary);text-align:center;line-height:2;position:relative;z-index:1;}
+.about-frame{position:absolute;inset:-8px;border:1px solid rgba(0,212,255,.15);animation:framePulse 3s ease-in-out infinite;}
+@keyframes framePulse{0%,100%{opacity:.3;transform:scale(1);}50%{opacity:.8;transform:scale(1.01);}}
+.about-info-chip{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--glass);border:1px solid var(--border);margin-bottom:.75rem;font-size:.85rem;color:var(--text);transition:all .3s;}
+.about-info-chip:hover{border-color:var(--primary);background:rgba(0,212,255,.05);transform:translateX(5px);}
+.chip-icon{color:var(--primary);font-size:1rem;width:20px;text-align:center;}
+.about-text{color:var(--text);opacity:.8;line-height:1.9;margin-bottom:1.5rem;font-size:.95rem;}
+.brand-bar{display:flex;align-items:center;justify-content:center;gap:1rem;padding:1.5rem;background:rgba(0,212,255,.03);border:1px solid rgba(0,212,255,.1);margin-bottom:2rem;font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;flex-wrap:wrap;text-align:center;}
+.brand-accent{color:var(--primary);}
+#experience{background:var(--darker);}
+.timeline{position:relative;max-width:900px;margin:0 auto;}
+.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--primary),transparent);transform:translateX(-50%);}
+.timeline-item{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;position:relative;opacity:0;transform:translateY(30px);transition:all .6s ease;}
+.timeline-item.visible{opacity:1;transform:translateY(0);}
+.timeline-item:nth-child(even) .timeline-content{grid-column:2;}
+.timeline-item:nth-child(odd) .timeline-content{grid-column:1;}
+.timeline-dot{position:absolute;left:50%;top:1.5rem;transform:translateX(-50%);width:14px;height:14px;background:var(--primary);border-radius:50%;box-shadow:0 0 20px var(--primary);z-index:1;}
+.timeline-dot::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(0,212,255,.3);animation:ringPulse 2s ease-in-out infinite;}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.5);opacity:0;}}
+.timeline-content{background:var(--glass);border:1px solid var(--border);padding:1.5rem;position:relative;transition:all .3s;}
+.timeline-content:hover{border-color:var(--primary);background:rgba(0,212,255,.04);transform:scale(1.02);}
+.timeline-year{font-family:'Share Tech Mono',monospace;font-size:.65rem;letter-spacing:.3em;color:var(--primary);margin-bottom:.5rem;display:block;}
+.timeline-role{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.25rem;}
+.timeline-company{color:var(--accent);font-size:.8rem;margin-bottom:.25rem;}
+.timeline-location{color:var(--muted);font-size:.75rem;letter-spacing:.1em;}
+@media(max-width:768px){.timeline::before{left:20px;}.timeline-item{grid-template-columns:1fr;padding-left:50px;}.timeline-item:nth-child(even) .timeline-content,.timeline-item:nth-child(odd) .timeline-content{grid-column:1;}.timeline-dot{left:20px;}}
+#skills{background:var(--dark);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.skill-group{background:var(--glass);border:1px solid var(--border);padding:1.5rem;transition:all .4s;opacity:0;transform:translateY(20px);}
+.skill-group.visible{opacity:1;transform:translateY(0);}
+.skill-group:hover{border-color:var(--primary);background:rgba(0,212,255,.04);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.3),0 0 20px rgba(0,212,255,.1);}
+.skill-group-title{font-family:'Orbitron',monospace;font-size:.75rem;font-weight:600;letter-spacing:.2em;color:var(--primary);margin-bottom:1rem;text-transform:uppercase;}
+.skill-tag{display:inline-block;padding:.3rem .8rem;margin:.25rem;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.2);font-size:.72rem;color:var(--text);font-family:'Share Tech Mono',monospace;letter-spacing:.05em;transition:all .2s;}
+.skill-tag:hover{background:rgba(0,212,255,.15);border-color:var(--primary);color:var(--primary);transform:scale(1.05);}
+.skill-bar-item{margin-bottom:.75rem;}
+.skill-bar-label{display:flex;justify-content:space-between;font-size:.75rem;color:var(--text);margin-bottom:.3rem;font-family:'Share Tech Mono',monospace;letter-spacing:.05em;}
+.skill-bar-track{height:3px;background:rgba(0,212,255,.1);border-radius:2px;overflow:hidden;}
+.skill-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--primary),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.4,0,.2,1);box-shadow:0 0 10px var(--primary);}
+.skill-bar-fill.animated{transform:scaleX(1);}
+#accomplishments{background:var(--darker);}
+.acc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.acc-card{background:var(--glass);border:1px solid var(--border);padding:1.5rem;position:relative;overflow:hidden;transition:all .4s;opacity:0;transform:scale(.95);}
+.acc-card.visible{opacity:1;transform:scale(1);}
+.acc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(to bottom,var(--primary),var(--accent));transition:height .4s;}
+.acc-card:hover::before{height:100%;}
+.acc-card:hover{border-color:rgba(0,212,255,.3);transform:translateX(4px) translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.4),-4px 4px 20px rgba(0,212,255,.1);}
+.acc-icon{font-size:1.8rem;margin-bottom:.75rem;display:block;filter:drop-shadow(0 0 10px rgba(0,212,255,.5));}
+.acc-title{font-family:'Orbitron',monospace;font-size:.8rem;font-weight:600;color:var(--primary);margin-bottom:.5rem;letter-spacing:.1em;}
+.acc-desc{font-size:.82rem;color:var(--text);opacity:.7;line-height:1.6;}
+#equipment{background:var(--dark);}
+.equip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
+.equip-card{background:var(--steel);border:1px solid rgba(0,212,255,.1);padding:1.5rem;text-align:center;position:relative;overflow:hidden;transition:all .4s;opacity:0;transform:translateY(20px);}
+.equip-card.visible{opacity:1;transform:translateY(0);}
+.equip-card:hover{border-color:var(--primary);box-shadow:0 0 40px rgba(0,212,255,.15),inset 0 0 40px rgba(0,212,255,.03);transform:translateY(-6px);}
+.equip-icon{font-size:2.5rem;margin-bottom:1rem;display:block;filter:drop-shadow(0 0 15px rgba(0,212,255,.5));}
+.equip-name{font-family:'Orbitron',monospace;font-size:.8rem;font-weight:600;color:#fff;margin-bottom:.5rem;letter-spacing:.1em;}
+.equip-model{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--primary);letter-spacing:.15em;margin-bottom:.5rem;}
+.equip-desc{font-size:.75rem;color:var(--muted);line-height:1.5;}
+#tools{background:var(--darker);}
+.tools-marquee-wrap{overflow:hidden;position:relative;padding:1rem 0;}
+.tools-marquee-wrap::before,.tools-marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:1;}
+.tools-marquee-wrap::before{left:0;background:linear-gradient(90deg,var(--darker),transparent);}
+.tools-marquee-wrap::after{right:0;background:linear-gradient(-90deg,var(--darker),transparent);}
+.tools-marquee{display:flex;gap:1rem;animation:marquee 25s linear infinite;width:max-content;}
+.tools-marquee:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.tool-pill{display:flex;align-items:center;gap:.5rem;white-space:nowrap;padding:.6rem 1.2rem;border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.04);font-family:'Share Tech Mono',monospace;font-size:.75rem;color:var(--text);letter-spacing:.1em;transition:all .2s;}
+.tool-pill:hover{border-color:var(--primary);color:var(--primary);background:rgba(0,212,255,.1);}
+#audits{background:var(--dark);position:relative;overflow:hidden;}
+.audits-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,212,255,.04) 0%,transparent 70%);}
+.audit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;z-index:1;}
+@media(max-width:600px){.audit-grid{grid-template-columns:1fr;}}
+.audit-card{border:1px solid var(--border);padding:2rem;text-align:center;background:var(--glass);transition:all .4s;position:relative;overflow:hidden;opacity:0;transform:scale(.9);}
+.audit-card.visible{opacity:1;transform:scale(1);}
+.audit-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,212,255,.08),transparent);opacity:0;transition:opacity .3s;}
+.audit-card:hover::before{opacity:1;}
+.audit-card:hover{border-color:var(--primary);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 30px rgba(0,212,255,.1);}
+.audit-badge{width:70px;height:70px;margin:0 auto 1rem;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,.1),rgba(123,47,255,.1));border:1px solid rgba(0,212,255,.3);display:flex;align-items:center;justify-content:center;font-size:2rem;}
+.audit-name{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--primary);margin-bottom:.5rem;}
+.audit-label{font-size:.75rem;color:var(--muted);letter-spacing:.15em;margin-bottom:1rem;font-family:'Share Tech Mono',monospace;}
+.audit-result{display:inline-block;padding:.3rem 1rem;background:rgba(0,255,157,.1);border:1px solid rgba(0,255,157,.3);color:var(--accent);font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;}
+#education{background:var(--darker);}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.edu-card{background:var(--glass);border:1px solid var(--border);padding:2rem;transition:all .3s;opacity:0;transform:translateX(-20px);}
+.edu-card.visible{opacity:1;transform:translateX(0);}
+.edu-card:hover{border-color:var(--primary);transform:translateX(5px);}
+.edu-degree{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.edu-field{color:var(--primary);font-size:.85rem;margin-bottom:.25rem;}
+.edu-uni{color:var(--muted);font-size:.8rem;font-family:'Share Tech Mono',monospace;margin-bottom:1rem;letter-spacing:.1em;}
+.edu-score{display:inline-block;padding:.3rem .8rem;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);font-family:'Orbitron',monospace;font-size:.85rem;color:var(--primary);font-weight:700;}
+#contact{background:var(--dark);border-top:1px solid var(--border);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2rem;}}
+.contact-item{display:flex;align-items:center;gap:1rem;padding:1rem;border:1px solid var(--border);margin-bottom:1rem;transition:all .3s;text-decoration:none;color:inherit;}
+.contact-item:hover{border-color:var(--primary);background:rgba(0,212,255,.03);transform:translateX(5px);}
+.contact-icon{width:44px;height:44px;border:1px solid rgba(0,212,255,.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:rgba(0,212,255,.05);}
+.contact-label{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:.25rem;}
+.contact-value{font-size:.85rem;color:var(--text);}
+.contact-right{background:var(--glass);border:1px solid var(--border);padding:2rem;text-align:center;}
+.contact-right h3{font-family:'Orbitron',monospace;font-size:1.1rem;color:#fff;margin-bottom:1rem;}
+.contact-right p{color:var(--muted);font-size:.85rem;line-height:1.7;margin-bottom:1.5rem;}
+.availability{display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--accent);margin-bottom:1.5rem;}
+.avail-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:blink 1.5s infinite;box-shadow:0 0 10px var(--accent);}
+footer{background:var(--darker);border-top:1px solid var(--border);padding:2rem;text-align:center;}
+footer p{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.15em;}
+footer span{color:var(--primary);}
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.4,0,.2,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:all .7s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(30px);transition:all .7s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+.glow-line{height:1px;background:linear-gradient(90deg,transparent,var(--primary),transparent);opacity:.3;margin:0;}
+@media(max-width:768px){nav{padding:1rem 1.5rem;}.nav-links{display:none;flex-direction:column;gap:1rem;position:fixed;top:70px;left:0;right:0;background:rgba(1,4,8,.98);padding:2rem;border-bottom:1px solid var(--border);}.nav-links.open{display:flex;}.hamburger{display:flex;}.nav-cta{display:none;}.hero-content{padding:0 1rem;}}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav id="navbar">
+  <a class="nav-logo" href="#hero" style="display:flex;flex-direction:column;line-height:1.1;text-decoration:none;">
+    <span style="font-family:'Orbitron',monospace;font-size:.65rem;font-weight:400;color:var(--primary);letter-spacing:.25em;text-transform:uppercase;opacity:.8;">Sirimalla</span>
+    <span style="font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;color:#fff;letter-spacing:.12em;text-shadow:0 0 15px var(--primary);">MANOJ <span style="color:var(--primary);">KUMAR</span></span>
+    <span style="font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.2em;color:var(--muted);">Junior Officer · OSD Manufacturing · MES Specialist</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#accomplishments">Achievements</a></li>
+    <li><a href="#equipment">Equipment</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:manojsirimalla25@gmail.com">Hire Me</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <canvas id="molecule-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-glow-orb orb1"></div>
+  <div class="hero-glow-orb orb2"></div>
+  <div class="hero-glow-orb orb3"></div>
+  <div class="floating-pill" style="left:5%;animation-duration:12s;animation-delay:0s;">💊</div>
+  <div class="floating-pill" style="left:15%;animation-duration:15s;animation-delay:3s;font-size:1rem;">⚗️</div>
+  <div class="floating-pill" style="left:25%;animation-duration:10s;animation-delay:1s;font-size:1.8rem;">🧬</div>
+  <div class="floating-pill" style="left:70%;animation-duration:14s;animation-delay:2s;">💊</div>
+  <div class="floating-pill" style="left:85%;animation-duration:11s;animation-delay:4s;font-size:1rem;">⚗️</div>
+  <div class="floating-pill" style="left:90%;animation-duration:16s;animation-delay:.5s;font-size:1.3rem;">🧪</div>
+  <div class="floating-pill" style="left:55%;animation-duration:13s;animation-delay:2.5s;font-size:1.1rem;">🔬</div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span>Available for New Opportunities</div>
+      <h1 class="hero-name">
+        <span class="line1">SIRIMALLA</span>
+        <span class="line2">MANOJ KUMAR</span>
+      </h1>
+      <div class="hero-typewriter"><span id="typewriter-text"></span><span class="typewriter-cursor"></span></div>
+      <p class="hero-desc">Pharmaceutical professional with 8+ years crafting precision in Oral Solid Dosage manufacturing. Zero major audit observations. 100% GMP compliance. Relentless pursuit of excellence.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary"><span>⚗ Explore Journey</span></a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+        <a href="1779440481317_resume.pdf" download="Sirimalla_Manoj_Kumar_Resume.pdf" class="btn-outline" style="border-color:var(--accent);color:var(--accent);">⬇ Download Resume</a>
+      </div>
+    </div>
+
+    <!-- 3D Photo Ring -->
+    <div class="photo-3d-wrap">
+      <div class="photo-sphere">
+        <!-- 3 rotating orbit rings -->
+        <div class="ring-orbit"></div>
+        <div class="ring-orbit"></div>
+        <div class="ring-orbit"></div>
+        <!-- Glow halo -->
+        <div class="photo-halo"></div>
+        <!-- Photo circle -->
+        <div class="photo-circle">
+          <div class="photo-initials">MK</div>
+        </div>
+        <!-- Scan line -->
+        <div class="photo-scanline"></div>
+        <!-- Data chips -->
+        <div class="photo-data-chip chip-tl">DR. REDDY'S · FT03</div>
+        <div class="photo-data-chip chip-br">OSD · 8+ YRS EXP</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-mouse"></div><span>Scroll to explore</span></div>
+</section>
+
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-num" data-target="8" data-suffix="+">0</span><span class="stat-label">Years Experience</span></div>
+      <div class="stat-card"><span class="stat-num" data-target="10" data-suffix="+">0</span><span class="stat-label">Operators Mentored</span></div>
+      <div class="stat-card"><span class="stat-num" data-target="15" data-suffix="%">0</span><span class="stat-label">Downtime Reduced</span></div>
+      <div class="stat-card"><span class="stat-num" data-target="100" data-suffix="%">0</span><span class="stat-label">Compliance Rate</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// WHO I AM</span>
+      <h2 class="section-title">Pharmaceutical Expert</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="reveal-left">
+        <div class="about-visual-box" style="padding:0;overflow:hidden;border-radius:4px;">
+          <div class="about-frame"></div>
+          <img src="1000467077.jpg" alt="OSD Manufacturing Process" style="width:100%;height:100%;object-fit:cover;min-height:300px;display:block;filter:saturate(0.85) contrast(1.1);"/>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(to top,rgba(1,4,8,0.95),transparent);text-align:center;">
+            <div class="about-visual-label">OSD SPECIALIST<br><span style="color:var(--muted);font-size:.6rem;">DR. REDDY'S LABORATORIES</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="brand-bar">
+          <span>Currently at</span><span class="brand-accent">Dr. Reddy's Laboratories Ltd.</span><span>| Junior Officer | FT03 Hyderabad</span>
+        </div>
+        <p class="about-text">A results-driven pharmaceutical manufacturing professional specializing in Oral Solid Dosage (OSD) forms. My expertise spans the complete lifecycle of drug manufacturing — from initial setup and equipment qualification to batch execution and regulatory compliance.</p>
+        <p class="about-text">With hands-on experience operating advanced capsule filling machinery (Bosch GKF 2500), implementing MES systems (Werum PAS-X, Rockwell), and successfully navigating USFDA, German, and GQA audits with zero major observations, I bring precision and reliability to every production challenge.</p>
+        <div class="about-info-chip"><span class="chip-icon">📍</span><span>Siricilla, Rajanna Siricilla, Telangana, India</span></div>
+        <div class="about-info-chip"><span class="chip-icon">🎓</span><span>M.Sc. Organic Chemistry | Ambedkar University</span></div>
+        <div class="about-info-chip"><span class="chip-icon">🗣️</span><span>English · Telugu · Hindi</span></div>
+        <div class="about-info-chip"><span class="chip-icon">⚡</span><span>GMP/cGMP · 21 CFR Part 11 · MES Expert</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// CAREER TIMELINE</span>
+      <h2 class="section-title">Professional Journey</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-year">2022 — PRESENT</span>
+          <div class="timeline-role">Junior Officer</div>
+          <div class="timeline-company">Dr. Reddy's Laboratories Ltd.</div>
+          <div class="timeline-location">📍 Hyderabad, FT03</div>
+        </div>
+        <div></div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div></div>
+        <div class="timeline-content">
+          <span class="timeline-year">2020 — 2022</span>
+          <div class="timeline-role">Senior Technical Officer</div>
+          <div class="timeline-company">Dr. Reddy's Laboratories Ltd.</div>
+          <div class="timeline-location">📍 Visakhapatnam, FT07</div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-year">2017 — 2020</span>
+          <div class="timeline-role">Self Management Team (SMT)</div>
+          <div class="timeline-company">Dr. Reddy's Laboratories Ltd.</div>
+          <div class="timeline-location">📍 Visakhapatnam, FT07</div>
+        </div>
+        <div></div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// EXPERTISE</span>
+      <h2 class="section-title">Skills & Proficiency</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">⚗ Manufacturing Operations</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Capsule Filling Operations</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.95"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Compression (IMA Killian)</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.90"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Coating (Ganscoater)</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.88"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Batch Documentation</span><span>97%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.97"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">🖥️ MES & Digital Systems</div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Werum PAS-X</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.92"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Rockwell MES</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.90"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>21 CFR Part 11</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.95"></div></div></div>
+        <div class="skill-bar-item"><div class="skill-bar-label"><span>Microsoft Office Suite</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="0.85"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">✅ Compliance & Quality</div>
+        <span class="skill-tag">GMP/cGMP</span><span class="skill-tag">GDP Documentation</span><span class="skill-tag">CAPA</span><span class="skill-tag">CPP Monitoring</span><span class="skill-tag">CQA Management</span><span class="skill-tag">Line Clearance</span><span class="skill-tag">Deviation Handling</span><span class="skill-tag">Root Cause Analysis</span><span class="skill-tag">OH&S Compliance</span>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">🚀 Continuous Improvement</div>
+        <span class="skill-tag">Kaizen</span><span class="skill-tag">Jishu Hozen</span><span class="skill-tag">CLIT</span><span class="skill-tag">5S Methodology</span><span class="skill-tag">Process Optimization</span><span class="skill-tag">Yield Improvement</span><span class="skill-tag">Team Mentoring</span><span class="skill-tag">Shift Planning</span><span class="skill-tag">Recipe Validation</span><span class="skill-tag">Cleanroom Standards</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accomplishments">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// ACHIEVEMENTS</span>
+      <h2 class="section-title">Key Accomplishments</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="acc-grid">
+      <div class="acc-card"><span class="acc-icon">🏆</span><div class="acc-title">Zero-Observation Audits</div><div class="acc-desc">Successfully faced USFDA, German & GQA audits with zero major observations — a testament to unwavering compliance and thorough audit preparedness.</div></div>
+      <div class="acc-card"><span class="acc-icon">⚡</span><div class="acc-title">MES Migration Project</div><div class="acc-desc">Led implementation of MES project, migrating from Manual BPR to Online BPR using Rockwell and Werum PAS-X — a landmark digital transformation initiative.</div></div>
+      <div class="acc-card"><span class="acc-icon">📈</span><div class="acc-title">15% Downtime Reduction</div><div class="acc-desc">Reduced machine downtime by 15% through strategic Kaizen, Jishu Hozen, CLIT & 5S initiatives, directly improving production throughput and efficiency.</div></div>
+      <div class="acc-card"><span class="acc-icon">🎯</span><div class="acc-title">100% Batch Compliance</div><div class="acc-desc">Executed multiple exhibit and validation batches with 100% compliance, ensuring regulatory approval readiness for critical pharmaceutical products.</div></div>
+      <div class="acc-card"><span class="acc-icon">👥</span><div class="acc-title">Mentored 10+ Operators</div><div class="acc-desc">Trained and mentored over 10 junior operators on GMP documentation, MES systems, and equipment handling — building a culture of excellence.</div></div>
+      <div class="acc-card"><span class="acc-icon">🔬</span><div class="acc-title">Weight Uniformity Excellence</div><div class="acc-desc">Improved capsule weight uniformity and significantly reduced batch deviations through optimized process parameter monitoring and control strategies.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// PHARMA EQUIPMENT</span>
+      <h2 class="section-title">Machinery Expertise</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="equip-grid">
+      <div class="equip-card"><span class="equip-icon">⚙️</span><div class="equip-name">Bosch GKF 2500</div><div class="equip-model">CAPSULE FILLING</div><div class="equip-desc">High-speed automatic capsule filling machine for precision dosing in OSD manufacturing operations.</div></div>
+      <div class="equip-card"><span class="equip-icon">🔩</span><div class="equip-name">IMA Zanasi LAB 16E</div><div class="equip-model">CAPSULE FILLING</div><div class="equip-desc">Laboratory-scale capsule filling equipment for R&D and small-scale production runs.</div></div>
+      <div class="equip-card"><span class="equip-icon">🏭</span><div class="equip-name">Bosch KKE 2500</div><div class="equip-model">CAPSULE FILLING</div><div class="equip-desc">Industrial capsule filling and inspection system ensuring high quality standards in production.</div></div>
+      <div class="equip-card"><span class="equip-icon">🌀</span><div class="equip-name">Ganscoater</div><div class="equip-model">COATING MACHINE</div><div class="equip-desc">Advanced tablet and capsule coating system for controlled film application with precision.</div></div>
+      <div class="equip-card"><span class="equip-icon">💫</span><div class="equip-name">IMA Killian</div><div class="equip-model">COMPRESSION</div><div class="equip-desc">High-performance rotary tablet press for consistent tablet compression in OSD manufacturing.</div></div>
+      <div class="equip-card"><span class="equip-icon">⚖️</span><div class="equip-name">Check Weigher</div><div class="equip-model">QUALITY CONTROL</div><div class="equip-desc">Automated weight verification system ensuring every product meets strict specification tolerances.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// TECHNICAL TOOLS</span>
+      <h2 class="section-title">Digital Arsenal</h2>
+      <div class="section-line"></div>
+    </div>
+  </div>
+  <div class="tools-marquee-wrap">
+    <div class="tools-marquee" id="toolsMarquee">
+      <div class="tool-pill">⚗ Werum PAS-X MES</div>
+      <div class="tool-pill">🖥 Rockwell MES</div>
+      <div class="tool-pill">📋 21 CFR Part 11</div>
+      <div class="tool-pill">📊 Microsoft Excel</div>
+      <div class="tool-pill">📝 GMP Documentation</div>
+      <div class="tool-pill">🏭 Bosch GKF 2500</div>
+      <div class="tool-pill">💊 IMA Zanasi LAB 16E</div>
+      <div class="tool-pill">⚙️ IMA Killian Press</div>
+      <div class="tool-pill">🌀 Ganscoater</div>
+      <div class="tool-pill">📑 GDP Compliance</div>
+      <div class="tool-pill">🔍 CAPA Management</div>
+      <div class="tool-pill">✅ Kaizen</div>
+      <div class="tool-pill">🎯 5S Methodology</div>
+      <div class="tool-pill">📈 Jishu Hozen</div>
+      <div class="tool-pill">🧪 CLIT Initiatives</div>
+      <div class="tool-pill">🔬 CPP Monitoring</div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// ACADEMIC FOUNDATION</span>
+      <h2 class="section-title">Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card"><div class="edu-degree">Master of Science</div><div class="edu-field">Organic Chemistry</div><div class="edu-uni">🎓 Ambedkar University</div><div class="edu-score">69.83%</div></div>
+      <div class="edu-card"><div class="edu-degree">Bachelor of Science (Hons.)</div><div class="edu-field">Chemistry</div><div class="edu-uni">🎓 GITAM (Deemed to be University)</div><div class="edu-score">7.83 GPA</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// GET IN TOUCH</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <a class="contact-item" href="tel:+917286881959"><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-value">+91-72868 81959</div></div></a>
+        <a class="contact-item" href="mailto:manojsirimalla25@gmail.com"><div class="contact-icon">✉️</div><div><div class="contact-label">Email</div><div class="contact-value">manojsirimalla25@gmail.com</div></div></a>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Location</div><div class="contact-value">Siricilla, Rajanna Siricilla, Telangana, India</div></div></div>
+        <a class="contact-item" href="https://linkedin.com/in/manoj-kumar-sirimalla-a19842312" target="_blank" rel="noopener"><div class="contact-icon">💼</div><div><div class="contact-label">LinkedIn</div><div class="contact-value">manoj-kumar-sirimalla</div></div></a>
+      </div>
+      <div class="contact-right reveal-right">
+        <h3>Open to Opportunities</h3>
+        <div class="availability"><span class="avail-dot"></span>Available for New Roles</div>
+        <p>Seeking challenging roles in pharmaceutical manufacturing, GMP compliance, MES implementation, or regulatory affairs where I can leverage my 8+ years of OSD expertise to drive operational excellence.</p>
+        <a href="mailto:manojsirimalla25@gmail.com" class="btn-primary" style="display:inline-block;margin-bottom:1rem;"><span>✉ Send Message</span></a><br>
+        <a href="tel:+917286881959" class="btn-outline" style="display:inline-block;margin-top:.75rem;">📞 Call Direct</a><br>
+        <a href="1779440481317_resume.pdf" download="Sirimalla_Manoj_Kumar_Resume.pdf" class="btn-outline" style="display:inline-block;margin-top:.75rem;border-color:var(--accent);color:var(--accent);">⬇ Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+<footer><p>© 2026 <span>Sirimalla Manoj Kumar</span> · Pharmaceutical Manufacturing Professional · Built with precision 💊</p></footer>
+
+<script>
+// CURSOR
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+document.querySelectorAll('a,button,.acc-card,.equip-card,.stat-card,.audit-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='20px';cursor.style.height='20px';ring.style.width='60px';ring.style.height='60px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px';ring.style.width='40px';ring.style.height='40px';});
+});
+// NAVBAR
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>50));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+// MOLECULE CANVAS
+const canvas=document.getElementById('molecule-canvas'),ctx=canvas.getContext('2d');
+let W,H,nodes=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;nodes=[];const c=Math.floor(W*H/18000);for(let i=0;i<c;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*2.5+1,type:Math.random()>.7?'atom':'node'});}
+function draw(){ctx.clearRect(0,0,W,H);for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.strokeStyle=`rgba(0,212,255,${(1-d/120)*.3})`;ctx.lineWidth=.5;ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();}}nodes.forEach(n=>{ctx.beginPath();if(n.type==='atom'){ctx.arc(n.x,n.y,n.r*1.5,0,Math.PI*2);ctx.fillStyle='rgba(0,255,157,0.6)';ctx.shadowBlur=10;ctx.shadowColor='#00ff9d';}else{ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(0,212,255,0.7)';ctx.shadowBlur=6;ctx.shadowColor='#00d4ff';}ctx.fill();ctx.shadowBlur=0;n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;});requestAnimationFrame(draw);}
+window.addEventListener('resize',resize);resize();draw();
+// TYPEWRITER
+const roles=['OSD Manufacturing Expert','USFDA Audit Champion','Capsule Filling Technologist','Continuous Improvement Leader','Exhibit & Validation Batch Expert','Pharmaceutical Manufacturing Professional'];
+let ri=0,ci=0,del=false,tw=document.getElementById('typewriter-text');
+function type(){const r=roles[ri];if(!del&&ci<=r.length){tw.textContent=r.slice(0,ci++);setTimeout(type,ci>r.length?1800:60);}else if(del&&ci>=0){tw.textContent=r.slice(0,ci--);setTimeout(type,ci<0?200:40);}else{del=!del;if(!del)ri=(ri+1)%roles.length;setTimeout(type,200);}}type();
+// STATS COUNTER
+function animCounter(el){const t=+el.dataset.target,s=el.dataset.suffix||'';let c=0;const st=t/60;const tim=setInterval(()=>{c=Math.min(c+st,t);el.textContent=Math.floor(c)+s;if(c>=t)clearInterval(tim);},30);}
+// INTERSECTION OBSERVER
+let statsAnimated=false;
+const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');if(entry.target.closest('#stats')&&!statsAnimated){statsAnimated=true;document.querySelectorAll('.stat-num').forEach(animCounter);}entry.target.querySelectorAll&&entry.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.classList.add('animated'));}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.timeline-item,.skill-group,.acc-card,.equip-card,.audit-card,.edu-card,.stat-card').forEach(el=>obs.observe(el));
+// Skill bars observer
+const barObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.classList.add('animated'));});},{threshold:.3});
+document.querySelectorAll('.skill-group').forEach(el=>barObs.observe(el));
+// MARQUEE
+const marquee=document.getElementById('toolsMarquee');
+if(marquee){const c=marquee.innerHTML;marquee.innerHTML=c+c;}
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('navLinks').classList.remove('open');}});});
+// SCROLL PROGRESS + COLOR SHIFT
+const sections=[...document.querySelectorAll('section[id]')];
+const sectionColors={
+  hero:'#030811',stats:'#010408',about:'#030d12',experience:'#05030f',
+  skills:'#030d12',accomplishments:'#030811',equipment:'#040d0a',
+  tools:'#050312',education:'#030811',contact:'#03080f'
+};
+const borderColors={
+  hero:'rgba(0,212,255,.15)',stats:'rgba(0,212,255,.15)',about:'rgba(0,212,255,.2)',
+  experience:'rgba(123,47,255,.25)',skills:'rgba(0,255,157,.2)',
+  accomplishments:'rgba(255,215,0,.15)',equipment:'rgba(0,255,157,.2)',
+  tools:'rgba(0,212,255,.15)',education:'rgba(244,114,182,.2)',contact:'rgba(0,255,157,.2)'
+};
+window.addEventListener('scroll',()=>{
+  const sy=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;
+  const pct=Math.min(sy/dh*100,100);
+  document.body.style.setProperty('--scroll-pct',pct+'%');
+  // find active section
+  let active='hero';
+  sections.forEach(s=>{if(sy>=s.offsetTop-200)active=s.id;});
+  // shift CSS variable for border color
+  const bc=borderColors[active]||'rgba(0,212,255,.15)';
+  document.documentElement.style.setProperty('--border',bc);
+});
+
+// 3D TILT
+document.querySelectorAll('.acc-card,.equip-card,.audit-card,.timeline-content').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect(),x=((e.clientX-r.left)/r.width-.5)*10,y=((e.clientY-r.top)/r.height-.5)*-10;card.style.transform=`perspective(600px) rotateY(${x}deg) rotateX(${y}deg) translateY(-4px)`;});card.addEventListener('mouseleave',()=>{card.style.transform='';});});
+</script>
+</body>
+</html>
